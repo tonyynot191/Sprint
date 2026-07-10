@@ -1,0 +1,227 @@
+<!-- index.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>FutSprint — Print, Order & Discover at FUTMINNA</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600;700&family=IBM+Plex+Mono:wght@500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<!-- ============ NAV ============ -->
+<header class="nav" id="nav">
+  <div class="nav__inner">
+    <a href="/" class="nav__logo">Fut<span>Sprint</span></a>
+
+    <nav class="nav__links" id="navLinks">
+      <a href="services.html" class="nav-link">Digital Services</a>
+      <a href="#vendors">Vendors</a>
+      <a href="#classifieds">Classifieds</a>
+      <a href="/track-order.html">Track Order</a>
+    </nav>
+
+    <div class="nav__actions">
+      <a href="/checkout.html" class="btn btn--primary btn--sm">Order Now</a>
+      <button class="nav__toggle" id="navToggle" aria-label="Toggle menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </div>
+</header>
+
+<main>
+
+  <!-- ============ HERO SPLIT ============ -->
+  <section class="hero">
+    <div class="hero__path hero__path--market" id="pathMarket">
+      <div class="hero__content">
+        <p class="eyebrow">Pillar 01 · Physical</p>
+        <h1>Order Prints &amp; Snacks<br>Skip the Queue.</h1>
+        <p class="hero__desc">Pre-order printing jobs and snacks from Ultramodern Market or the Post Office shop. Pick a pickup slot, walk straight to the counter.</p>
+        <a href="/vendors.html" class="btn btn--amber">Browse Shops &amp; Menus</a>
+      </div>
+    </div>
+
+    <div class="hero__divider" aria-hidden="true"></div>
+
+    <div class="hero__path hero__path--digital" id="pathDigital">
+      <div class="hero__content">
+        <p class="eyebrow">Pillar 02 · Digital</p>
+        <h1>Typing, Graphics &amp;<br>Web Work — Done Right.</h1>
+        <p class="hero__desc">Premium digital services handled personally: typing &amp; formatting, graphic design, UI/UX, and web development.</p>
+        <a href="services.html" class="btn btn--outline-light">Explore Services</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ SPONSORED STRIP ============ -->
+  <section class="ad-strip" aria-label="Sponsored student businesses">
+    <div class="section-head section-head--tight">
+      <p class="label-mono">Sponsored</p>
+      <div class="ad-strip__controls">
+        <button class="ad-nav" id="adPrev" aria-label="Previous ad">&larr;</button>
+        <button class="ad-nav" id="adNext" aria-label="Next ad">&rarr;</button>
+      </div>
+    </div>
+
+    <div class="ad-strip__track" id="adTrack">
+      <!-- Ad cards injected by JS from adData, static fallback below -->
+      <article class="ad-card">
+        <span class="ad-card__badge">Sponsored</span>
+        <h3>Zee's Bead Co.</h3>
+        <p>Handmade beaded jewelry, made-to-order. DM for bulk hostel prices.</p>
+        <a href="/classifieds.html" class="ad-card__link">View listing →</a>
+      </article>
+    </div>
+  </section>
+
+  <!-- ============ HOW IT WORKS ============ -->
+  <section class="how" id="how">
+    <div class="section-head">
+      <p class="label-mono">Process</p>
+      <h2>Three steps. No stress.</h2>
+    </div>
+
+    <div class="how__grid">
+      <div class="how__step">
+        <span class="how__mark">01</span>
+        <h3>Choose &amp; Upload</h3>
+        <p>Pick a shop or service, upload your document, or describe what you need.</p>
+      </div>
+      <div class="how__step">
+        <span class="how__mark">02</span>
+        <h3>Schedule &amp; Pay</h3>
+        <p>Select a pickup slot or deadline, then pay securely at checkout.</p>
+      </div>
+      <div class="how__step">
+        <span class="how__mark">03</span>
+        <h3>Pickup or Receive</h3>
+        <p>Track your order status live, then collect at the counter — or receive your file.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ LOCATIONS ============ -->
+  <section class="locations" id="vendors">
+    <div class="section-head">
+      <p class="label-mono">Physical Locations</p>
+      <h2>Two shops. Pick your stop.</h2>
+    </div>
+
+    <div class="locations__grid">
+      <article class="location-card" data-location="ultramodern">
+        <div class="location-card__top">
+          <h3>Ultramodern Market</h3>
+          <span class="status-pill" data-status="ultramodern">Checking…</span>
+        </div>
+        <p>Printing, photocopying &amp; snacks near the main market cluster.</p>
+        <a href="/shop.html?loc=ultramodern" class="btn btn--outline-dark btn--sm">View Menu</a>
+      </article>
+
+      <article class="location-card" data-location="postoffice">
+        <div class="location-card__top">
+          <h3>Post Office Shop</h3>
+          <span class="status-pill" data-status="postoffice">Checking…</span>
+        </div>
+        <p>Quick printing &amp; snack runs for the Post Office end of campus.</p>
+        <a href="/shop.html?loc=postoffice" class="btn btn--outline-dark btn--sm">View Menu</a>
+      </article>
+    </div>
+  </section>
+
+  <!-- ============ DIGITAL SERVICES TEASER ============ -->
+  <section class="services" id="digital-services">
+    <div class="section-head">
+      <p class="label-mono">Premium Digital</p>
+      <h2>Handled personally, start to finish.</h2>
+    </div>
+
+    <div class="services__grid">
+      <article class="service-card">
+        <h3>Typing &amp; Formatting</h3>
+        <p>Project work, assignments, reports — clean formatting, fast turnaround.</p>
+      </article>
+      <article class="service-card">
+        <h3>Graphic Design</h3>
+        <p>Flyers, posters, event graphics tailored for campus audiences.</p>
+      </article>
+      <article class="service-card">
+        <h3>UI/UX Design</h3>
+        <p>Wireframes to polished interfaces for apps, sites, and pitch decks.</p>
+      </article>
+      <article class="service-card">
+        <h3>Web Development</h3>
+        <p>Portfolio sites, small business sites, and web apps built to spec.</p>
+      </article>
+    </div>
+
+    <a href="/digital-services.html" class="link-arrow">View all digital services →</a>
+  </section>
+
+  <!-- ============ CLASSIFIEDS PREVIEW ============ -->
+  <section class="classifieds" id="classifieds">
+    <div class="section-head">
+      <p class="label-mono">Student Ad Network</p>
+      <h2>Campus Classifieds</h2>
+      <p class="section-sub">Student entrepreneurs advertising handmade goods and small businesses.</p>
+    </div>
+
+    <div class="classifieds__grid">
+      <article class="classified-card">
+        <h3>Amaka's Ankara Bags</h3>
+        <p>Custom ankara tote bags, made to order.</p>
+      </article>
+      <article class="classified-card">
+        <h3>Tunde's Barbershop (Hostel Run)</h3>
+        <p>Home service haircuts, hostel-friendly rates.</p>
+      </article>
+      <article class="classified-card">
+        <h3>Fresh Bites Snacks</h3>
+        <p>Homemade meat pies &amp; chin-chin, pre-order for pickup.</p>
+      </article>
+      <article class="classified-card">
+        <h3>Blessing's Braids</h3>
+        <p>Affordable braiding &amp; hair styling, weekend slots.</p>
+      </article>
+    </div>
+
+    <div class="classifieds__cta">
+      <a href="/classifieds.html" class="btn btn--outline-dark btn--sm">Browse All Ads</a>
+      <a href="/classifieds.html#advertise" class="btn btn--amber btn--sm">Advertise Your Business</a>
+    </div>
+  </section>
+
+</main>
+
+<!-- ============ FOOTER ============ -->
+<footer class="footer">
+  <div class="footer__inner">
+    <div class="footer__brand">
+      <p class="nav__logo">Fut<span>Sprint</span></p>
+      <p>Built for FUTMINNA students, by a FUTMINNA student.</p>
+    </div>
+
+    <div class="footer__links">
+      <div>
+        <h4>Platform</h4>
+        <a href="/vendors.html">Vendor Directory</a>
+        <a href="/digital-services.html">Digital Services</a>
+        <a href="/classifieds.html">Classifieds</a>
+      </div>
+      <div>
+        <h4>Support</h4>
+        <a href="/track-order.html">Track Order</a>
+        <a href="mailto:hello@futsprint.ng">Contact</a>
+      </div>
+    </div>
+  </div>
+
+  <p class="footer__bottom">© <span id="year"></span> FutSprint. Not officially affiliated with FUTMINNA.</p>
+</footer>
+
+<script src="js/main.js"></script>
+</body>
+</html>

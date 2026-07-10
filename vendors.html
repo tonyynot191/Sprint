@@ -1,0 +1,133 @@
+<!-- vendors.html (Vendor Directory) -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Vendor Directory — FutSprint</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600;700&family=IBM+Plex+Mono:wght@500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<!-- ============ NAV ============ -->
+<header class="nav" id="nav">
+  <div class="nav__inner">
+    <a href="index.html" class="nav__logo">Fut<span>Sprint</span></a>
+
+    <nav class="nav__links" id="navLinks">
+      <a href="index.html">Home</a>
+      <a href="services.html">Digital Services</a>
+      <a href="vendors.html" class="is-current">Vendors</a>
+      <a href="/classifieds.html">Classifieds</a>
+    </nav>
+
+    <div class="nav__actions">
+      <a href="/track-order.html" class="btn btn--primary btn--sm">Track Order</a>
+      <button class="nav__toggle" id="navToggle" aria-label="Toggle menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </div>
+</header>
+
+<main>
+
+  <!-- ============ HERO ============ -->
+  <section class="page-hero">
+    <div class="page-hero__inner">
+      <p class="eyebrow eyebrow--dark">Pillar 01 &amp; 03 · Directory</p>
+      <h1>Every shop and hustle on campus, in one list.</h1>
+      <p class="page-hero__desc">
+        Browse printing and snack shops at Ultramodern Market and the Post Office,
+        alongside student-run businesses advertising on the FutSprint network.
+        Filter by location, then order or reach out directly.
+      </p>
+    </div>
+  </section>
+
+  <!-- ============ SPONSORED AD BANNER (premium) ============ -->
+  <section class="sponsor-banner" aria-label="Sponsored student businesses">
+    <div class="sponsor-banner__head">
+      <div>
+        <p class="label-mono label-mono--light">Premium Placement</p>
+        <h2>Sponsored Listings</h2>
+      </div>
+      <a href="/classifieds.html#advertise" class="btn btn--amber btn--sm">
+        Advertise Here — from ₦1,500/wk
+      </a>
+    </div>
+
+    <div class="sponsor-banner__track" id="sponsorTrack">
+      <!-- Injected by JS -->
+    </div>
+  </section>
+
+  <!-- ============ FILTERS ============ -->
+  <section class="directory" id="directory">
+    <div class="section-head section-head--row">
+      <div>
+        <p class="label-mono">Vendor Directory</p>
+        <h2>Find a vendor</h2>
+      </div>
+
+      <div class="filters">
+        <div class="filter-group" id="locationFilters" role="group" aria-label="Filter by location">
+          <button class="filter-pill is-active" data-location="all">All</button>
+          <button class="filter-pill" data-location="ultramodern">Ultramodern Market</button>
+          <button class="filter-pill" data-location="postoffice">Post Office</button>
+        </div>
+
+        <label class="filter-select">
+          <span>Category</span>
+          <select id="categoryFilter">
+            <option value="all">All categories</option>
+            <option value="printing">Printing</option>
+            <option value="snacks">Snacks</option>
+            <option value="handmade">Handmade Goods</option>
+            <option value="beauty">Beauty &amp; Grooming</option>
+            <option value="fashion">Fashion</option>
+          </select>
+        </label>
+      </div>
+    </div>
+
+    <p class="directory__empty" id="emptyState" hidden>No vendors match these filters yet — try a different combination.</p>
+
+    <div class="vendor-grid" id="vendorGrid">
+      <!-- Injected by JS -->
+    </div>
+  </section>
+
+</main>
+
+<!-- ============ FOOTER ============ -->
+<footer class="footer">
+  <div class="footer__inner">
+    <div class="footer__brand">
+      <p class="nav__logo">Fut<span>Sprint</span></p>
+      <p>Built for FUTMINNA students, by a FUTMINNA student.</p>
+    </div>
+
+    <div class="footer__links">
+      <div>
+        <h4>Platform</h4>
+        <a href="vendors.html">Vendor Directory</a>
+        <a href="services.html">Digital Services</a>
+        <a href="/classifieds.html">Classifieds</a>
+      </div>
+      <div>
+        <h4>Support</h4>
+        <a href="/track-order.html">Track Order</a>
+        <a href="mailto:hello@futsprint.ng">Contact</a>
+      </div>
+    </div>
+  </div>
+
+  <p class="footer__bottom">© <span id="year"></span> FutSprint. Not officially affiliated with FUTMINNA.</p>
+</footer>
+
+<script src="js/main.js"></script>
+</body>
+</html>
